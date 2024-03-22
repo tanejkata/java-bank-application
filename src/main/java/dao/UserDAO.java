@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import model.LoginUser;
 import model.User;
 
 public class UserDAO {
@@ -23,6 +25,20 @@ public class UserDAO {
             statement.setString(5, user.getAddress());
             statement.executeUpdate();
         }
+    }
+    
+    public String loginChk(LoginUser lu) throws SQLException{
+    	String query = "Select name from User where email = ? and password=?";
+    	try(PreparedStatement statement = connection.prepareStatement(query)){
+             statement.setString(1, lu.getEmail());
+             statement.setString(2, lu.getPassword());
+             ResultSet rs = statement.executeQuery();
+             if(rs.next()) {
+            	 // login successful, return the email
+            	 return rs.getString("name");
+             }
+    	}
+    	return null;
     }
 
 }

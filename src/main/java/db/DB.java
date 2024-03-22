@@ -6,9 +6,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DB {
-	private static final String DB_URL = "jdbc:mysql://localhost:3306/bank";
+	private static final String DB_URL = "jdbc:mysql://localhost:3306/bank?useSSL=false";
     private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "example";
+    // The default password
+    private static final String DB_PASSWORD = "";
 
     static {
         try {

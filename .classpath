@@ -8,7 +8,11 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/Users/tanej/Downloads/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar"/>
-	<classpathentry kind="lib" path="/Users/tanej/Downloads/apache-tomcat-10.1.15/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/Lambton Class/3rd Term/Java EE/WorkSpace/apache-tomcat-10.1.15/lib/servlet-api.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="https://jakarta.ee/specifications/servlet/6.0/apidocs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Lambton Class/3rd Term/Java EE/WorkSpace/Term project/java-bank-application/src/main/webapp/WEB-INF/lib/mysql-connector-j-8.3.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

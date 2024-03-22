@@ -46,6 +46,7 @@ public class Register extends HttpServlet {
 	        String email = request.getParameter("email");
 	        String phone = request.getParameter("phone");
 	        String address = request.getParameter("address");
+	        String userType = request.getParameter("userType");
 
 	        User user = new User();
 	        user.setName(name);
@@ -53,6 +54,7 @@ public class Register extends HttpServlet {
 	        user.setAddress(address);
 	        user.setEmail(email);
 	        user.setPhone(phone);
+	        user.setUser_type(userType);
 	        
 			PrintWriter out = response.getWriter();
 
